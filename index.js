@@ -15,7 +15,7 @@ var defaults = {
 Api = function(options) {
   this.set(options)
   this.throttle = new Throttle({
-    rate: 40,
+    rate: 35,
     ratePer: 10000,
     concurrent: 20
   })
@@ -97,7 +97,7 @@ Api.prototype.request = function(endpoint, type, data, callback) {
       })
     })
     .catch(function(err) {
-      console.log(err)
+      //console.log(err)
     })
 
 
